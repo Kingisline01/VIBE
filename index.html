@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Rubik+Mono+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@500&family=Roboto+Mono:wght@500&family=Rubik+Mono+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>VIBE</title>
+</head>
+<body>
+    <h1 class="header1">VIBE</h1>
+<!-- div to to get name from the user and display -->
+<input class="c-checkbox" type="checkbox" id="checkbox">
+<div class="c-formContainer">
+  <form class="c-form" action="/">
+    <input class="c-form__input" id="userNameInput" placeholder="Full Name" type="text" required>
+    <label class="c-form__buttonLabel" for="checkbox" onclick="startGreeting()">
+      <button class="c-form__button" type="button">Go</button>
+    </label>
+    <label class="c-form__toggle" for="checkbox" data-title="Start"></label>
+</form>
+</div>
+
+<div class="resultdiv" id="resultDiv" style="display: none;">
+    <p id="greetingMessage"></p>
+</div>
+
+<!-- div2 for displaying the new content  -->
+<!-- style="display: none;" -->
+<div class="emotion" id="mood_of_the_user" style="display: none;">
+
+<div class="checkbox1" id="emoji1">
+<label for="checkbox1" class="toggle-button" onclick="toggleCheckbox('checkbox1')">
+<input type="checkbox" value="1" name="fooby[1][]" id="checkbox1" class="hidden-checkbox" onclick="onlyOne(this)">
+<i>&#128512;</i>
+</label>
+</div>
+
+<br>
+<div class="checkbox1">
+<label for="checkbox2" class="toggle-button" onclick="toggleCheckbox('checkbox2')">
+<input type="checkbox" value="2" name="fooby[1][]" id="checkbox2" class="hidden-checkbox" onclick="onlyOne(this)">
+<i>&#128542;</i>
+</label>
+</div>
+
+<br>
+
+
+<div class="checkbox1">
+<label for="checkbox3" class="toggle-button" onclick="toggleCheckbox('checkbox3')">
+<input type="checkbox" value="3" name="fooby[1][]" id="checkbox3" class="hidden-checkbox" onclick="onlyOne(this)">
+<i>&#128545;</i>
+</label>
+</div>
+
+
+<div class="checkbox1">
+<label for="checkbox4" class="toggle-button" onclick="toggleCheckbox('checkbox4')">
+<input type="checkbox" value="4" name="fooby[1][]" id="checkbox4" class="hidden-checkbox" onclick="onlyOne(this)">
+<i>&#128555;</i>
+</label>
+</div>
+
+</div>
+
+<!-- div for happy checkbox -->
+<div class="div3" id="forhappy" style="display: none;">
+    <!-- <h3 class="header3">Keep your face to the sunshine and you cannot see a shadow</h3> -->
+    <!-- <img width="200px" height="200px" src="happy_tree.jpg" alt=""> -->
+    <video id="videoPlayer1" width="640" height="320" autoplay onclick="start(this)">
+        <!-- <source src="plant.mp4" type="video/mp4">
+        <source src="plant.mp4" type="video/ogg"> -->
+        Your browser does not support the video tag.
+      </video>
+
+    <div class="cont">
+        <h2>Your task for Today</h2>
+
+        <ul id="unordered-list">
+            <li onclick="toggleCompleted1('plant(1).mp4', event)">&#x2022;Eat Healthy</li>
+            <li onclick="toggleCompleted2('plant(2).mp4',event)">&#x2022;Complete Work</li>
+            <li onclick="toggleCompleted3('plant(3).mp4',event)">&#x2022;Drink Water</li>
+        </ul>
+    </div>
+</div>
+
+
+<!-- div for sad checkbox -->
+<div class="div3" id="forsad" style="display: none;">
+    <!-- <h3 class="header3">The worst kind of sad is not being able to explain why.</h3> -->
+    <!-- <img width="200px" height="200px" src="depressed_true.jpg" alt=""> -->
+    <video id="videoPlayer2" width="320" height="240" autoplay onclick="start(this)">
+        <!-- <source src="plant.mp4" type="video/mp4">
+        <source src="plant.mp4" type="video/ogg"> -->
+        Your browser does not support the video tag.
+      </video>
+
+    <div class="cont">
+        <h2>Your task for Today</h2>
+
+        <ul id="unordered-list">
+            <li onclick="toggleCompleted4('plant(1).mp4',event)">&#x2022;Listen to your favourite Music</li>
+            <li onclick="toggleCompleted5('plant(2).mp4',event)">&#x2022;Call your friends and talk</li>
+            <li onclick="toggleCompleted6('plant(3).mp4',event)">&#x2022;Eat healthy food and and drink water</li>
+        </ul>
+    </div>
+</div>
+
+<!-- div for depressed checkbox -->
+<div class="div3" id="forangry" style="display: none;">
+    <!-- <h3 class="header3">Violence is the last refuge of the incompetent.</h3> -->
+    <!-- <img width="200px" height="200px" src="angry_tree.jpg" alt=""> -->
+    <video id="videoPlayer3" width="320" height="240" autoplay onclick="start(this)">
+        <!-- <source src="plant.mp4" type="video/mp4">
+        <source src="plant.mp4" type="video/ogg"> -->
+        Your browser does not support the video tag.
+      </video>
+
+    <div class="cont">
+        <h2>Your task for Today</h2>
+
+        <ul id="unordered-list">
+            <li onclick="toggleCompleted7('plant(1).mp4',event)">&#x2022;Go to your favourite Spot</li>
+            <li onclick="toggleCompleted8('plant(2).mp4',event)">&#x2022;Play your favourite Game</li>
+            <li onclick="toggleCompleted9('plant(3).mp4',event)">&#x2022;Do your favourite Hobby</li>
+        </ul>
+    </div>
+</div>
+
+<!-- div for tired checkbox -->
+<div class="div3" id="fortired" style="display: none;">
+    <!-- <h3 class="header3">Laziness is nothing more than the habit of resting before you get tired.</h3> -->
+    <!-- <img width="200px" height="200px" src="tired_tree.jpg" alt=""> -->
+    <video id="videoPlayer4" width="320" height="240" autoplay onclick="start(this)">
+        <!-- <source src="plant.mp4" type="video/mp4">
+        <source src="plant.mp4" type="video/ogg"> -->
+        Your browser does not support the video tag.
+      </video>
+
+    <div class="cont">
+        <h2>Your task for Today</h2>
+
+        <ul id="unordered-list">
+            <li onclick="toggleCompleted10('plant(1).mp4',event)">&#x2022;Stay Hydrated</li>
+            <li onclick="toggleCompleted11('plant(2).mp4',event)">&#x2022;Postpone important Activity</li>
+            <li onclick="toggleCompleted12('plant(3).mp4',event)">&#x2022;Sleep till you recharge Yourself</li>
+        </ul>
+    </div>
+</div>
+
+
+<!-- ending div -->
+
+    <script src="app.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</body>
+</html>
